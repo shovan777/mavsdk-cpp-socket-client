@@ -1,0 +1,3 @@
+/home/calcgen2/drone_workspace/sockets_cpp/socket.io-cpp-client-sample/src/build/CMakeFiles/rebuild_cache.dir
+/home/calcgen2/drone_workspace/sockets_cpp/socket.io-cpp-client-sample/src/build/CMakeFiles/edit_cache.dir
+/home/calcgen2/drone_workspace/sockets_cpp/socket.io-cpp-client-sample/src/build/CMakeFiles/client.dir

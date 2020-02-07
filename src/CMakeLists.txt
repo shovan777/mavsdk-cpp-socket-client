@@ -17,10 +17,13 @@ else()
 endif()
 
 # Boost
+find_package (Threads)
 find_package(Boost REQUIRED COMPONENTS system date_time random)
+find_package(MAVSDK REQUIRED)
 include_directories(${Boost_INCLUDE_DIRS})
 link_directories(${Boost_LIBRARY_DIRS})
 list(APPEND extra_libs ${Boost_LIBRARIES})
+list(APPEND extra_libs ${CMAKE_THREAD_LIBS_INIT})
 
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -W -Wall")
 set(CMAKE_CXX_FLAGS_DEBUG "${CMAKE_CXX_FLAGS_DEBUG} -O0")
@@ -35,4 +38,9 @@ else()
 endif()
 
 add_executable(client client.cpp)
-target_link_libraries(client ${extra_libs})
+target_link_libraries(client
+  MAVSDK::mavsdk_telemetry
+  MAVSDK::mavsdk_action
+  MAVSDK::mavsdk
+  ${extra_libs}
+)
