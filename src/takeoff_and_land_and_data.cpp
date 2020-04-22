@@ -1,7 +1,7 @@
 //
-// Simple example to demonstrate how to use the MAVSDK.
+// Copyright (c) Prokura Innovations. All rights reserved.
+// Licensed under the MIT license. See LICENSE file in the project root for full license information.
 //
-// Author: Julian Oes <julian@oes.ch>
 
 #include <chrono>
 #include <cstdint>
